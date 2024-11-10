@@ -1,0 +1,7 @@
+<h1 class="font-bold text-2xl ">TO-DO LIST</h1>
+<form (ngSubmit)="onSubmit()" class="pt-9 flex mx-9 ">
+       <input type="text" id="title" name="title" placeholder="Add your task" [(ngModel)]="title" class="rounded-full w-full h-16 border border-black bg-gray-200 pl-9">
+       <input type="text" id="title" name="desc" placeholder="Add description" [(ngModel)]="desc" class="rounded-full w-full h-16 border border-black bg-gray-200 pl-9">
+       <button class="bg-red-500 text-white p-4 rounded-full hover:bg-red-600 lg:w-auto md:w-24 sm:w-20">
+        ADD
+     </button></form>

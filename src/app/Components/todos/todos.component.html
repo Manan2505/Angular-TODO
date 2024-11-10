@@ -1,0 +1,17 @@
+<div *ngIf="todoDesc && check">
+    <app-todo-desc [description]="todoDesc" [check]="check"></app-todo-desc>
+</div>
+<div class="border border-green-500 w-[70vw] bg-white rounded-xl">
+    <app-add-todo (addTodo)="addIt($event)"></app-add-todo>
+
+<div *ngIf="this.todos.length===0 else displayTodo" class="text-2xl font-bold py-9" >No todos to display</div>
+<ng-template #displayTodo >
+    <ul *ngFor="let todo of todos" class="pt-9">
+        <div class="text-center pb-8 mx-9 rounded-full flex justify-between ">
+            <i class="fas fa-pencil-alt text-black ml-8" (click)="todoInfo(todo)"></i>
+            <h1 class="text-2xl font-bold ">{{todo.title}}</h1>
+            <button class="text-2xl mr-9" (click)="deleteIt(todo)">&times;</button>
+        </div>
+    </ul>
+</ng-template> 
+</div>
