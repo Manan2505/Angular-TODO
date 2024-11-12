@@ -7,9 +7,9 @@
 <div *ngIf="this.todos.length===0 else displayTodo" class="text-2xl font-bold py-9" >No todos to display</div>
 <ng-template #displayTodo >
     <ul *ngFor="let todo of todos" class="pt-9">
-        <div class="text-center pb-8 mx-9 rounded-full flex justify-between ">
-            <i class="fas fa-pencil-alt text-black ml-8" (click)="todoInfo(todo)"></i>
-            <h1 class="text-2xl font-bold ">{{todo.title}}</h1>
+        <div class="text-center pb-8 lg:mx-9 flex justify-between">
+            <i class="fas fa-pencil-alt text-black ml-8 mt-3" (click)="todoInfo(todo)"></i>
+            <div class=" w-[35%]"><h1 class="text-2xl font-bold break-words">{{todo.title}}</h1></div>
             <button class="text-2xl mr-9" (click)="deleteIt(todo)">&times;</button>
         </div>
     </ul>
